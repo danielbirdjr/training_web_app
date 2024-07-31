@@ -1,18 +1,16 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+// src/app/layout.js
+"use client";
 
-const inter = Inter({ subsets: ["latin"] });
+import React from 'react';
+import NavBar from '../components/NavBar';
 
-export default function RootLayout({ children }) {
+const Layout = ({ children }) => {
   return (
-    <html lang="en">
-      <head>
-        <title>ProgressAI</title>
-      </head>
-      <body>
-        {children}
-      </body>
-    </html>
+    <>
+      <NavBar />
+      <main>{children}</main>
+    </>
   );
-}
+};
 
+export default Layout;
