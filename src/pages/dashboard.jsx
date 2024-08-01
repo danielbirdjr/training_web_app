@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/dashboard.css';
+import VolumeIntensityGraph from '../components/VolumeIntensityGraph'; // Adjust the path accordingly
 
 const Dashboard = () => {
   return (
@@ -12,10 +13,10 @@ const Dashboard = () => {
             <div className='checkin-widget widget'>
                 <h3>Sleep</h3>
                 <h3>7:45 hr</h3>
-                <h3>Stress</h3>
-                <h3>2/5</h3>
                 <h3>Weight</h3>
                 <h3>-0.48 lb</h3>
+                <h3>Stress</h3>
+                <h3>2/5</h3>
             </div>
             <div className='vol-int-graph-widget widget'>
                 <div className='mesocycle-title'>
@@ -23,7 +24,7 @@ const Dashboard = () => {
                     <h5>JUL 15 - OCT 29</h5>
                 </div>
                 <div className='widget-line'></div>
-                    <div>The contents of graph would go here. This is a graph that would display the volume and intensity progress from week to week throughout this mesocycle. For example, it would avg the total set weekly volume & total set RPE for each week of the meso.</div>
+                <VolumeIntensityGraph />
             </div>
             <div className='week-overview-widget widget'>
                 <div className='week-overview-title'>
