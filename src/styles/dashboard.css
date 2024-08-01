@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
 
 .dashboard-container {
@@ -76,12 +77,52 @@
 /* Weekly Overview Widget */
 .week-overview-widget {
     align-items: center;
-    justify-content: center;
     text-align: center;
     grid-column: span 4;
     grid-row: span 4;
+    padding: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
+.week-overview-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: .875rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
 
+.left-chevron-icon, .right-chevron-icon {
+    height: 1rem;
+}
 
+.right-chevron-icon{
+    margin-left: 2rem;
+}
 
+.week-navigation-arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.week-overview-day {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--almost-black);
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    border-radius: .5rem;
+    text-transform: uppercase;
+}
+
+.complete-week {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    gap: 2rem;
+}
