@@ -21,6 +21,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
-
-
-// consider changing login and logout to sign in and sign out
