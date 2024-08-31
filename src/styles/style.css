@@ -463,7 +463,7 @@ section {
     padding-right: 1rem;
 }
 
-.about_section_image img {
+.about_section_image Image {
     /* height: 38rem; */
     height: 80vh;
     border-radius: 1rem;
