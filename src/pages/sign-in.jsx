@@ -57,7 +57,7 @@ const SignIn = () => {
                         </div>
                         <div className="line"></div>
                         <div className="signup_container_bottom">
-                            <p>Don't have an account yet?</p>
+                            <p>Don&apost have an account yet?</p>
                             <button onClick={() => window.location.href='/sign-up'}>Sign Up</button>
                         </div>
                     </div>

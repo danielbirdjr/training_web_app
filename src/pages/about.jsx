@@ -7,11 +7,11 @@ const About = () => {
             <section classNameName="about">
                 <div className="about_section_framer">
                     <div className="about_section_image">
-                        <img src="usapl_competition_photo_2.jpg" alt="Photo of Daniel Bird" />
+                        <Image src="usapl_competition_photo_2.jpg" alt="Photo of Daniel Bird" />
                     </div>
                     <div className="about_section_text">
-                        <h4 className="first_h4">Who's behind this?</h4>
-                        <h2>Hey, I'm Daniel Bird</h2>
+                        <h4 className="first_h4">Who&aposs behind this?</h4>
+                        <h2>Hey, I&aposm Daniel Bird</h2>
                         <p>I am the creator of ProgressAI. As a Computer Science student with over 7 years of gym training, including competing in powerlifting and training bodybuilding and boxing, I developed this app to merge my passions for fitness and technology.</p>
 
                         <h4>Why ProgressAI?</h4>
