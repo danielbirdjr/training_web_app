@@ -50,7 +50,7 @@ const Pricing = () => {
                             <li className="price_feature">✓&nbsp; All Pro features</li>
                             <li className="last_price_feature price_feature">✓&nbsp; Coaches can view clients progress & manage programs</li>
                         </ul>
-                        <button >Coming Soon</button>
+                        <button onClick={() => alert('Coming Soon!')}>Coming Soon</button>
                     </div>
                 </div>
             </section>
