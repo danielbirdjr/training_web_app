@@ -380,9 +380,10 @@ section {
     border-radius: 1rem;
 }
 
-#price_card_2 {    
+/* Uncomment when i have a paid version wokring */
+/* #price_card_2 {    
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-}
+} */
 
 .price_card h2 {
     font-size: 1.25rem;
@@ -429,14 +430,10 @@ section {
 }
 
 .price_feature {
-    margin-top: 1rem;
-    font-size: rem;
     list-style-type: none;
     background-color: var(--white);
     color: var(--almost-black);
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.5rem;
+    line-height: 2.5em;
 }
 
 .price_card button {
