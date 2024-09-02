@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import '../styles/style.css'; // added this 
 
-const NavBar = () => {
+const PublicNavBar = () => {
     return (
         <nav className="nav_bar_wrapper">
             <div className="nav_bar">
@@ -23,4 +23,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default PublicNavBar;

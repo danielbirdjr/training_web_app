@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/PublicNavBar';
 
 const Layout = ({ children }) => {
   return (

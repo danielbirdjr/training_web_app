@@ -1,4 +1,5 @@
-.nav_bar_wrapper {
+/* AuthenticatedNavBar.css */
+.authenticated_nav_bar_wrapper {
     width: 100%;
     position: fixed;
     top: 0;
@@ -8,20 +9,20 @@
     border-bottom: 1px var(--dark-gray) solid;
 }
 
-.nav_bar {
+.authenticated_nav_bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 3rem;
 }
 
-.logo {
+.authenticated_logo {
     text-align: left;
     font-size: 1.25rem;
     font-weight: 500;
 }
 
-.nav_links {
+.authenticated_nav_links {
     display: flex;
     list-style: none;
     gap: 3rem;
@@ -29,13 +30,13 @@
     justify-content: center;
 }
 
-.nav_links li a {
+.authenticated_nav_links li a {
     text-decoration: none;
     font-size: 1rem;
     color: black;
 }
 
-.menu_buttons {
+.authenticated_menu_buttons {
     display: flex;
     align-items: center;
     justify-content: flex-end;

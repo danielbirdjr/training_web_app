@@ -1,16 +1,16 @@
-.mobile-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-  
-  .mobile-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
+/* AuthenticatedMobileNavBar.css */
+.authenticated_mobile_nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.authenticated_mobile_nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
