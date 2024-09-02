@@ -1,6 +1,7 @@
 import React from 'react';
+import withAuth from '../hoc/withAuth';
 import '../styles/dashboard.css';
-import VolumeIntensityGraph from '../components/VolumeIntensityGraph'; // Adjust the path accordingly
+import VolumeIntensityGraph from '../components/VolumeIntensityGraph';
 
 const Dashboard = () => {
   return (
@@ -62,4 +63,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default withAuth(Dashboard);

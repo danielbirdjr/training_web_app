@@ -1,14 +1,13 @@
-// src/pages/_app.js
 import React from 'react';
 import { useRouter } from 'next/router';
-import '../styles/globals.css'; // Import global styles
-import '../styles/variables.css'; // Import CSS variables
-import '../styles/reset.css'; // Import CSS reset
-import Layout from '../app/layout'; // Default layout
-import AuthenticatedLayout from '../app/AuthenticatedLayout'; // Authenticated layout
-import PublicNavBar from '../components/PublicNavBar'; // Import Public Navbar
-import { AuthProvider, useAuth } from '../context/AuthContext'; // Import Auth Context
-import '../styles/notifications.css'; // Import the notification styles
+import '../styles/globals.css';
+import '../styles/variables.css';
+import '../styles/reset.css';
+import Layout from '../app/layout';
+import AuthenticatedLayout from '../app/AuthenticatedLayout';
+import PublicNavBar from '../components/PublicNavBar';
+import { AuthProvider, useAuth } from '../context/AuthContext';
+import '../styles/notifications.css';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -34,16 +33,21 @@ function MyApp({ Component, pageProps }) {
 }
 
 function AuthConsumer({ Component, pageProps }) {
-  const { isAuthenticated } = useAuth(); // Get authentication state from AuthContext
+  const { isAuthenticated } = useAuth();
+
+  if (isAuthenticated === undefined) return null; // Ensure loading state is handled properly
 
   return isAuthenticated ? (
     <AuthenticatedLayout>
       <Component {...pageProps} />
     </AuthenticatedLayout>
   ) : (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <PublicNavBar />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 
