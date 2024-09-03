@@ -18,10 +18,10 @@ const Sidebar = () => {
           <div className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
             {isExpanded && (
               <ul className="nav-links">
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/workout">Workout</a></li>
-                <li><a href="/program">Program</a></li>
-                <li><a href="/profile">Profile</a></li>
+                <li><Link href="/dashboard">Dashboard</Link></li>
+                <li><Link href="/workout">Workout</Link></li>
+                <li><Link href="/program">Program</Link></li>
+                <li><Link href="/profile">Profile</Link></li>
               </ul>
             )}
           </div>
