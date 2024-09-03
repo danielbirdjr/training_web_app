@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMenu, FiChevronLeft } from 'react-icons/fi';
+import Link from 'next/link';
 import '../styles/sidebar.css';
 
 const Sidebar = () => {
