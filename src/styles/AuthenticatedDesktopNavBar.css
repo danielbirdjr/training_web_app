@@ -1,0 +1,54 @@
+.layout-grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%; /* Adjust the column widths */
+    height: 100vh;
+  }
+  
+  .layout-grid.sidebar-open {
+    grid-template-columns: 13.33% 60% 26.67%; /* Adjust when sidebar is open */
+  }
+  
+  .desktop-sidebar {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    padding: 1rem;
+  }
+  
+  .desktop-sidebar.open {
+    width: 13.33%;
+  }
+  
+  .toggle-sidebar-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .nav_links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav_links li {
+    margin-bottom: 1rem;
+  }
+  
+  .nav_links li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    background-color: var(--almost-white);
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  

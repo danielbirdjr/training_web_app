@@ -1,31 +1,32 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import AuthenticatedNavBar from '../components/AuthenticatedNavBar'; // Adjust the path if necessary
-import AuthenticatedMobileNavBar from '../components/AuthenticatedMobileNavBar'; // Adjust the path if necessary
+import Sidebar from '../components/Sidebar';
 
 const AuthenticatedLayout = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
 
-    handleResize(); // Set initial state
-    window.addEventListener('resize', handleResize);
+        handleResize(); // Set initial state
+        window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-  return (
-    <>
-      {isMobile ? <AuthenticatedMobileNavBar /> : <AuthenticatedNavBar />}
-      <main>{children}</main>
-    </>
-  );
+    return (
+        <div className="authenticated-layout">
+            {!isMobile && <Sidebar />} {/* Show Sidebar only on desktop */}
+            <div className="main-wrapper">
+                <main className="main-content">{children}</main>
+            </div>
+        </div>
+    );
 };
 
 export default AuthenticatedLayout;
