@@ -1,13 +1,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import '../styles/globals.css';
-import '../styles/variables.css';
-import '../styles/reset.css';
+import '../styles/notifications.css';
 import Layout from '../app/layout';
 import AuthenticatedLayout from '../app/AuthenticatedLayout';
 import PublicNavBar from '../components/PublicNavBar';
 import { AuthProvider, useAuth } from '../context/AuthContext';
-import '../styles/notifications.css';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -21,10 +19,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       {isPublicRoute ? (
-        <>
+        <div className='public-view'>
           <PublicNavBar />
           <Component {...pageProps} />
-        </>
+        </div>
       ) : (
         <AuthConsumer Component={Component} pageProps={pageProps} />
       )}

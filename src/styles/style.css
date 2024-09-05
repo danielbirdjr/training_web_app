@@ -8,14 +8,12 @@
     --almost-white: rgb(227, 227, 227);
 }
 
-* {
-    margin: 0;
-    padding: 0;
+.public-view * {
     font-family: "Inter", sans-serif;
-    box-sizing: border-box;
     background-color: var(--almost-black);
     color: var(--white);
 }
+
 
 /* Nav Bar */
 .nav_bar_wrapper {
@@ -98,6 +96,7 @@ section {
 
 .first_section {
     margin-top: 7.5rem;
+    background-color: var(--almost-black);
 }
 
 .home_text {
