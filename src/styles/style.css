@@ -158,7 +158,7 @@ section {
 .signin_frame {
     display: flex;
     align-items: center;
-    height: 29rem;
+    height: auto;
     width: 30rem;
     border: 1px var(--border-gray) solid;
     border-radius: 1rem;
@@ -302,7 +302,7 @@ section {
 .signup_frame {
     display: flex;
     align-items: center;
-    height: 44rem;
+    height: auto;
     width: 30rem;
     border: 1px var(--border-gray) solid;
     border-radius: 1rem;
@@ -345,15 +345,39 @@ section {
 }
 
 .signup_fields button {
+    font-size: 1rem;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
     border: 1px var(--dark-gray) solid;
     background-color: var(--white);
     color: var(--almost-black);
     font-weight: 550;
-    margin-bottom: 0;
 }
 
 .signup_fields button:hover {
     cursor: pointer;
+}
+
+.google_signip_button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px var(--dark-gray) solid;
+    background-color: var(--white);
+    color: var(--almost-black);
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.google_signip_button svg {
+    background: none;
+    height: 1.125rem;
+    width: 1.125rem;
 }
 
 .signup_line {
@@ -495,9 +519,9 @@ section {
 }
 
 .about_section_image Image {
-    /* height: 38rem; */
     height: 80vh;
     border-radius: 1rem;
+    overflow: hidden;
 }
 
 .about_section_text {

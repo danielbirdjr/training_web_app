@@ -8,7 +8,11 @@ const About = () => {
             <section classNameName="about">
                 <div className="about_section_framer">
                     <div className="about_section_image">
-                        <Image src="usapl_competition_photo_2.jpg" alt="Photo of Daniel Bird" />
+                        <Image src="/usapl_competition_photo_2.jpg" alt="Photo of Daniel Bird" 
+                            width={600} // Arbitrary width to satisfy Next.js
+                            height={800} // Arbitrary height to satisfy Next.js
+                            style={{ height: '80vh', width: 'auto' }}
+                        />
                     </div>
                     <div className="about_section_text">
                         <h4 className="first_h4">Who&#39;s behind this?</h4>
