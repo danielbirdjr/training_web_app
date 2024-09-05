@@ -10,8 +10,12 @@
 
 .public-view * {
     font-family: "Inter", sans-serif;
-    background-color: var(--almost-black);
     color: var(--white);
+    background-color: var(--almost-black);
+}
+
+.public-view {
+    background-color: var(--almost-black);
 }
 
 
@@ -153,7 +157,6 @@ section {
 .signin_page, .signup_page {
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
 }
 .signin_frame {
     display: flex;
