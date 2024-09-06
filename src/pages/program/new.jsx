@@ -8,7 +8,7 @@ const NewProgram = () => {
             <h1>Start a New Program</h1>
             <div>
                 <div>
-                    <button>Create a custom program</button>
+                    <button onClick={() => window.location.href='/program/custom'}>Create a custom program</button>
                     <p>If you know how to create a good program, use this option to create a new program from a blank canvas.</p>
                 </div>
                 <div>

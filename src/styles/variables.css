@@ -1,9 +1,9 @@
 :root {
-    --almost-black: rgb(18, 18, 18);
-    --light-gray: rgb(195, 195, 195);
-    --dark-gray: rgb(23, 23, 23);
     --white: rgb(255, 255, 255);
+    --almost-white: rgb(227, 227, 227);
+    --light-gray: rgb(195, 195, 195);
     --med-gray: rgb(117, 117, 117);
     --border-gray: rgb(42, 42, 42);
-    --almost-white: rgb(227, 227, 227);
+    --dark-gray: rgb(23, 23, 23);
+    --almost-black: rgb(18, 18, 18);
 }

@@ -1,0 +1,108 @@
+
+
+.custom-program-creation-page {
+    padding: 2rem;
+}
+  
+.days-container {
+    display: flex;
+    gap: 1rem;
+}
+  
+.day-component {
+    padding: .5rem;
+    border-radius: .25rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+}
+
+.day-component-top-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.day-label-dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .25rem;
+}
+
+.day_other_options {
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.add-muscle-group-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    background-color: var(--almost-white);
+    border: none;
+    border-radius: .25rem;
+}
+
+.add-muscle-group-icon {
+    font-size: 1.25rem;
+    margin-right: .5rem;
+}
+  
+.add-day-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+  
+.muscle-group-and-exercise-component {
+    padding: .75rem 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--almost-white);
+    border-radius: .25rem;
+}
+
+.muscle-group-and-delete-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.muscle-dropdown {
+    background-color: var(--border-gray);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: .5px;
+    border: none;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.delete-exercise-component-icon {
+    cursor: pointer;
+}
+
+.exercise-dropdown {
+    width: 100%;
+    margin-bottom: .25rem;
+    border-radius: .25rem;
+    letter-spacing: .5px;
+    border: none;
+    padding: .25rem .5rem;
+}
+
+
+/* RP app dark mode
+black = white 
+white lettering = almost black 
+dark gray background = almost white */
