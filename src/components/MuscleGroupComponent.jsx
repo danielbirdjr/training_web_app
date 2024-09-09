@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiTrash2 } from "react-icons/fi";
 
-const MuscleGroupComponent = () => {
+const MuscleGroupComponent = ({ onDelete }) => {
     return (
         <div className="muscle-group-and-exercise-component">
             <div className='muscle-group-and-delete-menu'>
@@ -21,7 +21,7 @@ const MuscleGroupComponent = () => {
                     <option>Forearms</option>
                     <option>Neck</option>
                 </select>
-                <FiTrash2 className='delete-exercise-component-icon'/>
+                <FiTrash2 className='delete-exercise-component-icon' onClick={onDelete} />
             </div>
             <select className="exercise-dropdown">
                 <option>Select exercise</option>

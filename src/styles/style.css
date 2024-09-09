@@ -8,13 +8,13 @@
     --almost-white: rgb(227, 227, 227);
 }
 
-.public-view * {
-    font-family: "Inter", sans-serif;
-    color: var(--white);
+html {
     background-color: var(--almost-black);
 }
 
-.public-view {
+.public-view * {
+    font-family: "Inter", sans-serif;
+    color: var(--white);
     background-color: var(--almost-black);
 }
 

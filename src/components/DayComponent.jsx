@@ -3,11 +3,15 @@ import MuscleGroupComponent from './MuscleGroupComponent';
 import { FiPlus } from "react-icons/fi";
 import { FiMoreHorizontal } from "react-icons/fi";
 
-const DayComponent = ({ onDelete }) => {
+const DayComponent = () => {
     const [muscleGroups, setMuscleGroups] = useState([]);
 
     const handleAddMuscleGroup = () => {
-        setMuscleGroups([...muscleGroups, {}]);
+        setMuscleGroups([...muscleGroups, { id: Date.now() }]); // Assign a unique ID to each muscle group
+    };
+
+    const handleDeleteMuscleGroup = (idToDelete) => {
+        setMuscleGroups(muscleGroups.filter((muscleGroup) => muscleGroup.id !== idToDelete));
     };
 
     return (
@@ -27,8 +31,11 @@ const DayComponent = ({ onDelete }) => {
                     <FiMoreHorizontal />
                 </div>
             </div>
-            {muscleGroups.map((_, index) => (
-                <MuscleGroupComponent key={index} />
+            {muscleGroups.map((muscleGroup) => (
+                <MuscleGroupComponent
+                    key={muscleGroup.id}
+                    onDelete={() => handleDeleteMuscleGroup(muscleGroup.id)}
+                />
             ))}
             <button onClick={handleAddMuscleGroup} className='add-muscle-group-component'>
                 <FiPlus className='add-muscle-group-icon'/>
