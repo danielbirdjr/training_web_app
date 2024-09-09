@@ -1,5 +1,4 @@
-
-
+/* Bigger picture: most of the page */
 .custom-program-creation-page {
     padding: 2rem;
 }
@@ -8,16 +7,18 @@
     display: flex;
     gap: 1rem;
 }
-  
+
+/* Day component */
 .day-component {
     padding: .5rem;
-    border-radius: .25rem;
+    border-radius: .1rem;
     width: 20rem;
     display: flex;
     flex-direction: column;
-    background-color: rgb(247, 247, 247);
+    background-color: var(--light-gray);
 }
 
+/* Add label & ... */
 .day-component-top-menu {
     display: flex;
     justify-content: space-between;
@@ -28,8 +29,11 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
+    font-weight: 700;
     border: none;
-    border-radius: .25rem;
+    /* border-radius: .25rem; */
+    color: var(--white);
+    background-color: var(--dark-gray);
 }
 
 .day_other_options {
@@ -38,8 +42,61 @@
     padding-left: .5rem;
     cursor: pointer;
     font-size: 1.25rem;
+    color: var(--almost-black);
 }
 
+/* Exercise component */
+.muscle-group-and-exercise-component {
+    padding: .75rem 0.5rem;
+    margin-bottom: .5rem;
+    background-color: var(--white)
+    
+    
+    /* border-radius: .25rem; */
+}
+
+/* Muscle group & trash can */
+.muscle-group-and-delete-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .75rem;
+    /* color: var(--white); */
+}
+
+.muscle-dropdown {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    border: 1.5px ;
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: .5px;
+    border: none;
+    padding: .25rem .5rem;
+    /* border-radius: .25rem; */
+}
+
+.delete-exercise-component-icon {
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+/* Select exercise */
+.exercise-dropdown {
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 550;
+    letter-spacing: .5px;
+    padding: .3rem .5rem;
+    /* border-radius: .25rem; */
+    background-color: var(--dark-gray);
+    color: var(--white);
+    border: none;
+    /* border: 1px solid var(--light-gray); */
+
+}
+
+/* + Add muscle group */
 .add-muscle-group-component {
     display: flex;
     align-items: center;
@@ -47,62 +104,21 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 1rem;
-    background-color: var(--almost-white);
+    background-color: var(--white);
     border: none;
-    border-radius: .25rem;
+    /* border-radius: .25rem; */
 }
 
 .add-muscle-group-icon {
     font-size: 1.25rem;
     margin-right: .5rem;
 }
-  
+
+
+
+/* + Add a day */
 .add-day-button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-  
-.muscle-group-and-exercise-component {
-    padding: .75rem 0.5rem;
-    margin-bottom: 1rem;
-    background-color: var(--almost-white);
-    border-radius: .25rem;
-}
-
-.muscle-group-and-delete-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.muscle-dropdown {
-    background-color: var(--border-gray);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 550;
-    letter-spacing: .5px;
-    border: none;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-}
-
-.delete-exercise-component-icon {
-    cursor: pointer;
-}
-
-.exercise-dropdown {
-    width: 100%;
-    margin-bottom: .25rem;
-    border-radius: .25rem;
-    letter-spacing: .5px;
-    border: none;
-    padding: .25rem .5rem;
-}
-
-
-/* RP app dark mode
-black = white 
-white lettering = almost black 
-dark gray background = almost white */

@@ -15,22 +15,17 @@ const DayComponent = ({ onDelete }) => {
             <div className='day-component-top-menu'>
                 <select className="day-label-dropdown">
                     <option>Add label</option>
-                    <option>Sun</option>
-                    <option>Mon</option>
-                    <option>Tue</option>
-                    <option>Wed</option>
-                    <option>Thur</option>
-                    <option>Fri</option>
-                    <option>Sat</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tueday</option>
+                    <option>Wedday</option>
+                    <option>Thurday</option>
+                    <option>Friday</option>
+                    <option>Satday</option>
                 </select>
                 <div className="day_other_options">
                     <FiMoreHorizontal />
                 </div>
-                {/* <select className="day_other_options">
-                    <FiMoreHorizontal />
-                    <option>Custom name</option>
-                    <option>Delete day</option>
-                </select> */}
             </div>
             {muscleGroups.map((_, index) => (
                 <MuscleGroupComponent key={index} />

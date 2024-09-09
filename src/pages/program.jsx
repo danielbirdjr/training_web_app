@@ -22,7 +22,7 @@ const Program = () => {
       {!isCustomProgram ? (
         <div className="program-selection">
           <h2>Create a New Program</h2>
-          <button onClick={handleSelectCustomProgram}>Create Custom Program</button>
+          <button onClick={() => window.location.href='/program/custom'}>Create Custom Program</button>
           <button onClick={() => alert('Templates are coming soon!')}>Choose from Template</button>
         </div>
       ) : (
