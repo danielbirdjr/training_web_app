@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FiMenu, FiChevronLeft } from 'react-icons/fi';
 import Link from 'next/link';
 import '../styles/sidebar.css';
 
-const Sidebar = () => {
-    const [isExpanded, setIsExpanded] = useState(true);
-
-    const toggleSidebar = () => {
-        setIsExpanded(!isExpanded);
-    };
-
+const Sidebar = ({ isExpanded, toggleSidebar }) => {
     return (
         <>
           <button className="hamburger-btn" onClick={toggleSidebar}>
@@ -27,7 +21,7 @@ const Sidebar = () => {
             )}
           </div>
         </>
-      );
+    );
 };
 
 export default Sidebar;

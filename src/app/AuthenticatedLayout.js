@@ -2,9 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
+import { useRouter } from 'next/router';
 
 const AuthenticatedLayout = ({ children }) => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isSidebarExpanded, setIsSidebarExpanded] = useState(true); // Track sidebar state
+    const router = useRouter();
 
     useEffect(() => {
         const handleResize = () => {
@@ -19,9 +22,11 @@ const AuthenticatedLayout = ({ children }) => {
         };
     }, []);
 
+    const isFullWidthPage = router.pathname === '/program/custom'; // Adjust for full-width page
+
     return (
-        <div className="authenticated-layout">
-            {!isMobile && <Sidebar />} {/* Show Sidebar only on desktop */}
+        <div className={`authenticated-layout ${isFullWidthPage ? 'full-width' : ''} ${isSidebarExpanded ? 'sidebar-expanded' : 'sidebar-collapsed'}`}>
+            {!isMobile && <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={() => setIsSidebarExpanded(!isSidebarExpanded)} />}
             <div className="main-wrapper">
                 <main className="main-content">{children}</main>
             </div>

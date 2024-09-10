@@ -40,9 +40,9 @@
 }
 
 .sidebar.collapsed {
-    width: 0; /* No width when collapsed */
-    padding: 0; /* Remove padding when collapsed */
-    border: none; /* Remove any borders or visual elements */
+    width: 0; 
+    padding: 0; 
+    border: none; 
 }
 
 .nav-links {
@@ -68,28 +68,53 @@
     border-radius: 5px;
 }
 
-/* Main layout container */
+
+/* General Layout */
 .authenticated-layout {
     display: grid;
-    grid-template-columns: auto 60% auto; /* Left padding, content, right padding */
+    grid-template-columns: 1fr minmax(0, 60%) 1fr; /* Default layout for most pages */
     width: 100%;
     min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Full-Width Layout for specific pages */
+.authenticated-layout.full-width {
+    display: flex;
+    width: 100%;
+    transition: margin-left 0.3s ease;
 }
 
 /* Content wrapper */
 .main-wrapper {
-    grid-column: 2; /* Middle content section */
+    grid-column: 2; /* Center content by default */
     margin: 0 auto;
     width: 100%;
 }
 
 /* Content section */
 .main-content {
-    width: 100%; /* Full width of the content within the wrapper */
-    max-width: 100%; /* Ensure it doesn't overflow */
+    width: 100%;
+    max-width: 100%;
 }
 
-/* Adjust for expanded sidebar */
-.sidebar.expanded ~ .authenticated-layout {
-    grid-template-columns: calc((40% - 12rem) / 2) 60% calc((40% - 12rem) / 2); /* Left padding, content, right padding */
+/* Adjust layout for expanded sidebar on full-width page */
+.sidebar-expanded.full-width .main-wrapper {
+    margin-left: 12rem;
+    width: calc(100% - 12rem);
+}
+
+/* Reset margin for collapsed sidebar on full-width page */
+.sidebar-collapsed.full-width .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Adjust layout for sidebar on non-full-width pages */
+.sidebar-expanded:not(.full-width) .main-wrapper {
+    margin-left: 12rem;
+}
+
+.sidebar-collapsed:not(.full-width) .main-wrapper {
+    margin-left: 0;
 }

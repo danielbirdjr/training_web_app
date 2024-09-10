@@ -5,10 +5,13 @@ html {
 
 .custom-program-creation-page {
     padding: 2rem;
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap;
 }
   
 .days-container {
-    display: flex;
+    display: inline-flex;
     gap: 1rem;
 }
 
@@ -124,11 +127,11 @@ html {
 
 /* + Add a day */
 .add-day-button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    width: 20rem;
+    height: 5rem;
     cursor: pointer;
+    padding: .5rem;
 }
-
 
 
 .options-popup {
