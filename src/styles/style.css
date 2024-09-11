@@ -135,9 +135,9 @@ section {
 
 .home_image {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
-    background-color: var(--dark-gray);
+    /* background-color: var(--dark-gray); */
     height: 24rem;
     border-radius: 4rem;
 }
