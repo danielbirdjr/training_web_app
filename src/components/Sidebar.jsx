@@ -6,20 +6,23 @@ import '../styles/sidebar.css';
 const Sidebar = ({ isExpanded, toggleSidebar }) => {
     return (
         <>
-          <button className="hamburger-btn" onClick={toggleSidebar}>
-            {isExpanded ? <FiChevronLeft /> : <FiMenu />}
-          </button>
+            <div className='hamburger-menu-container'>
+                <button className="hamburger-btn" onClick={toggleSidebar}>
+                    {isExpanded ? <FiChevronLeft /> : <FiMenu />}
+                </button>
+            </div>
+
     
-          <div className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
-            {isExpanded && (
-              <ul className="nav-links">
-                <li><Link href="/dashboard">Dashboard</Link></li>
-                <li><Link href="/workout">Workout</Link></li>
-                <li><Link href="/program">Program</Link></li>
-                <li><Link href="/profile">Profile</Link></li>
-              </ul>
-            )}
-          </div>
+            <div className={`sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
+                {isExpanded && (
+                    <ul className="nav-links">
+                        <li><Link href="/dashboard">Dashboard</Link></li>
+                        <li><Link href="/workout">Workout</Link></li>
+                        <li><Link href="/program">Program</Link></li>
+                        <li><Link href="/profile">Profile</Link></li>
+                    </ul>
+                )}
+            </div>
         </>
     );
 };

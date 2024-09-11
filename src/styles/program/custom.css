@@ -4,7 +4,7 @@ html {
 }
 
 .custom-program-creation-page {
-    padding: 2rem;
+    padding: 2.75rem 1rem;
     display: flex;
     overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap;
@@ -111,6 +111,10 @@ html {
     /* border-radius: .25rem; */
 }
 
+.add-muscle-group-component:hover {
+    background-color: var(--almost-white);
+}
+
 .add-muscle-group-icon {
     font-weight: 650;
     margin-right: .5rem;
@@ -118,15 +122,24 @@ html {
 }
 
 
-
-
-/* + Add a day */
+/* + Add day */
 .add-day-button {
     width: 20rem;
     height: 5rem;
     cursor: pointer;
-    padding: .5rem;
+    font-size: .9rem;
+    font-weight: 550;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
+
+.add-day-icon {
+    font-weight: 650;
+    margin-right: .5rem;
+    color: var(--dark-gray);
+}
+
 
 
 .options-popup {
