@@ -123,7 +123,7 @@
 
 /* Adjust layout for sidebar on non-full-width pages */
 .sidebar-expanded:not(.full-width) .main-wrapper {
-    margin-left: 12rem;
+    margin-left: 6rem;
 }
 
 .sidebar-collapsed:not(.full-width) .main-wrapper {
