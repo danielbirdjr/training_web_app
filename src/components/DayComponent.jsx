@@ -62,11 +62,11 @@ const DayComponent = () => {
                     <option>Add label</option>
                     <option>Sunday</option>
                     <option>Monday</option>
-                    <option>Tueday</option>
-                    <option>Wedday</option>
-                    <option>Thurday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
                     <option>Friday</option>
-                    <option>Satday</option>
+                    <option>Saturday</option>
                 </select>
                 <div className="day_other_options" onClick={() => setShowOptions(!showOptions)} ref={optionsRef} >
                     <FiMoreHorizontal />
@@ -74,9 +74,9 @@ const DayComponent = () => {
                         <div className="options-popup">
                             {!customLabelMode ? (
                                 <>
-                                    <button onClick={() => setCustomLabelMode(true)}>Custom Label</button>
+                                    <button onClick={() => setCustomLabelMode(true)}>Custom label</button>
                                     <div className='popup-menu-line'></div>
-                                    <button onClick={handleDeleteDay}>Delete Day</button>
+                                    <button onClick={handleDeleteDay}>Delete day</button>
                                 </>
                             ) : (
                                 <div className="custom-label-input">
