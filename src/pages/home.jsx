@@ -22,7 +22,7 @@ const Home = () => {
                         style={{ height: 'auto', width: 'auto' }}
                     />
 
-                    <Image src="/fitness_app_progress-removebg-preview.png" alt="Photo of fitness app progress on iPhone" 
+                    <Image src="/figma-workout.png" alt="Photo of fitness app progress on iPhone" 
                         width={600} // Arbitrary width to satisfy Next.js
                         height={800} // Arbitrary height to satisfy Next.js
                         style={{ height: 'auto', width: 'auto' }}
