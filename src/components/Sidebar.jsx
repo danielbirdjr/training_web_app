@@ -20,6 +20,7 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
                         <li><Link href="/workout">Workout</Link></li>
                         <li><Link href="/program">Program</Link></li>
                         <li><Link href="/profile">Profile</Link></li>
+                        <li><Link href="/">Sign out</Link></li>
                     </ul>
                 )}
             </div>
