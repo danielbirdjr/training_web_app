@@ -76,16 +76,23 @@
     transition: background 0.2s ease;
     display: flex;
     flex-grow: 1;
+    color: var(--almost-black);
 }
 
 .nav-links li a:hover {
-    background-color: var(--med-gray); /* Highlight on hover */
-    border-radius: 5px;
+    background-color: var(--almost-white); /* Highlight on hover */
+    border-radius: .5rem;
 }
 
 .sidebar-icon {
     margin-right: 1.5rem;
+    background: none;
 }
+
+.nav-links li a path, .nav-links li a line, .nav-links li a polyline, .nav-links li a circle {
+    color: var(--almost-black);
+}
+
 
 
 
