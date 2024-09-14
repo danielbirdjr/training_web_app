@@ -46,7 +46,7 @@
 
 .sidebar.expanded {
     width: 12rem;
-    background-color: var(--almost-white);
+    background-color: var(--white);
     border-right: 2px solid var(--light-gray);
 }
 
@@ -58,26 +58,35 @@
 
 .nav-links {
     list-style: none;
-    padding: 0;
-    margin-top: 4rem; /* Add space for the toggle button */
+    margin-top: 3rem; 
+    width: 100%;
 }
 
 .nav-links li {
     margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links li a {
     text-decoration: none;
     font-size: 1rem;
-    display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     transition: background 0.2s ease;
+    display: flex;
+    flex-grow: 1;
 }
 
 .nav-links li a:hover {
     background-color: var(--med-gray); /* Highlight on hover */
     border-radius: 5px;
 }
+
+.sidebar-icon {
+    margin-right: 1.5rem;
+}
+
 
 
 /* General Layout */
