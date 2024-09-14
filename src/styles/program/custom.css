@@ -4,7 +4,9 @@ html {
 }
 
 .custom-program-creation-page {
-    padding: 2.75rem 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
     display: flex;
     overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap;
@@ -14,6 +16,62 @@ html {
     display: inline-flex;
     gap: 1rem;
 }
+
+/* Untitled program     Create Program ...  */
+.top-bar {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+
+    margin-left: 2.75rem;
+}
+
+.program-title-input {
+    display: flex;
+    align-items: center;
+    width: 18.25rem;
+    margin-right: 1rem;
+    font-size: .9rem;
+    padding: .5rem;
+    font-weight: 600;
+    border: 1.5px solid var(--light-gray);
+    border-radius: 0.5rem;
+}
+
+.top-bar-button-and-options {
+    display: flex;
+    margin: 0rem 1rem;
+    align-items: center;
+}
+
+.top-bar-button-and-options .create-button {
+    margin: 0.25rem 1rem;
+    padding: calc(.5rem + 1.5px) 1rem;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-size: .9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background-color: var(--med-gray);
+}
+
+.top-bar-button-and-options .options-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
 
 /* Day component */
 .day-component {
