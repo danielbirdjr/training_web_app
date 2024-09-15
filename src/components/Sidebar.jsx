@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiMenu, FiChevronLeft, FiCheckSquare, FiFolderPlus } from 'react-icons/fi';
+import { FiMenu, FiChevronsLeft, FiCheckSquare, FiFolderPlus } from 'react-icons/fi';
 import { GrHomeRounded } from "react-icons/gr";
 import { FiLogOut } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
@@ -13,7 +13,7 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
         <>
             <div className='hamburger-menu-container'>
                 <button className="hamburger-btn" onClick={toggleSidebar}>
-                    {isExpanded ? <FiChevronLeft /> : <FiMenu />}
+                    {isExpanded ? <FiChevronsLeft /> : <FiMenu />}
                 </button>
             </div>
 

@@ -32,7 +32,8 @@ html {
 .program-title-input {
     display: flex;
     align-items: center;
-    width: 18.25rem;
+    text-align: center;
+    width: 16.5rem;
     margin-right: 1rem;
     font-size: .9rem;
     padding: .5rem;
