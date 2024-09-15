@@ -3,6 +3,8 @@ import withAuth from '../../hoc/withAuth';
 import DayComponent from '../../components/DayComponent';
 import AddDayButtonComponent from '../../components/AddDayButtonComponent';
 import { FiMoreHorizontal } from "react-icons/fi";
+import { db, auth } from '../../firebase'; // Import Firestore
+import { collection, addDoc } from 'firebase/firestore';
 import '../../styles/program/custom.css';
 
 const CustomProgram = () => {
@@ -20,9 +22,23 @@ const CustomProgram = () => {
 
     const handleTitleChange = (e) => setProgramTitle(e.target.value);
 
-    const handleCreateOrSave = () => {
-        // Functionality to save the program or proceed to the next step
-        console.log("Program Saved:", programTitle);
+    const handleCreateOrSave = async () => {
+        try {
+            const user = auth.currentUser; 
+            if (user) {
+                const programData = {
+                    title: programTitle,
+                    days: days,
+                    createdAt: new Date(),
+                };
+                await addDoc(collection(db, `users/${user.uid}/programs`), programData);
+                console.log("Program saved successfully!");
+            } else {
+                console.log("User not authenticated");
+            }
+        } catch (error) {
+            console.error("Error saving program:", error);
+        }
     };
 
     return (
@@ -39,13 +55,12 @@ const CustomProgram = () => {
                         <FiMoreHorizontal />
                     </button>
                 </div>
-                
             </div>
 
             <div className="custom-program-creation-page">
                 <div className="days-container">
                     {days.map((_, index) => (
-                    <DayComponent key={index} onDelete={() => handleDeleteDay(index)} />
+                        <DayComponent key={index} onDelete={() => handleDeleteDay(index)} />
                     ))}
                     <AddDayButtonComponent onAddDay={handleAddDay} />
                 </div>
