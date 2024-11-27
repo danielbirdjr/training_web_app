@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import MuscleGroupComponent from './MuscleGroupComponent';
 import { FiPlus, FiMoreHorizontal } from "react-icons/fi";
 
-const DayComponent = () => {
+const DayComponent = ({ dayIndex, onDayChange, onDelete }) => {
     const [muscleGroups, setMuscleGroups] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
     const [customLabelMode, setCustomLabelMode] = useState(false);
@@ -11,11 +11,15 @@ const DayComponent = () => {
     const optionsRef = useRef(null);
 
     const handleAddMuscleGroup = () => {
-        setMuscleGroups([...muscleGroups, { id: Date.now() }]);
+        setMuscleGroups([...muscleGroups, { id: Date.now(), name: '', exercise: '' }]);
     };
 
     const handleDeleteMuscleGroup = (idToDelete) => {
         setMuscleGroups(muscleGroups.filter((muscleGroup) => muscleGroup.id !== idToDelete));
+    };
+
+    const handleMuscleGroupChange = (updatedMuscleGroup) => {
+        setMuscleGroups(muscleGroups.map(mg => mg.id === updatedMuscleGroup.id ? updatedMuscleGroup : mg));
     };
 
     const handleCustomLabelChange = (e) => {
@@ -28,10 +32,6 @@ const DayComponent = () => {
             setCustomLabelMode(false);
             setShowOptions(false);
         }
-    };
-
-    const handleDeleteDay = () => {
-        // Logic to delete the entire day component
     };
 
     const handleOutsideClick = (event) => {
@@ -50,6 +50,10 @@ const DayComponent = () => {
             document.removeEventListener('click', handleOutsideClick);
         };
     }, [showOptions]);
+
+    useEffect(() => {
+        onDayChange(dayIndex, { dayLabel, muscleGroups });
+    }, [dayLabel, muscleGroups]);
 
     return (
         <div className="day-component">
@@ -76,7 +80,7 @@ const DayComponent = () => {
                                 <>
                                     <button onClick={() => setCustomLabelMode(true)}>Custom label</button>
                                     <div className='popup-menu-line'></div>
-                                    <button onClick={handleDeleteDay}>Delete day</button>
+                                    <button onClick={onDelete}>Delete day</button>
                                 </>
                             ) : (
                                 <div className="custom-label-input">
@@ -96,7 +100,9 @@ const DayComponent = () => {
             {muscleGroups.map((muscleGroup) => (
                 <MuscleGroupComponent
                     key={muscleGroup.id}
+                    muscleGroup={muscleGroup}
                     onDelete={() => handleDeleteMuscleGroup(muscleGroup.id)}
+                    onMuscleGroupChange={handleMuscleGroupChange}
                 />
             ))}
             <button onClick={handleAddMuscleGroup} className='add-muscle-group-component'>
